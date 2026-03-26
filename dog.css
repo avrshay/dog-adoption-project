@@ -1,3 +1,29 @@
-body{
-    fo
+
+#nameDog {
+    color: #00CED1;
+    text-align: center;
+    font-size: 2em;
+     margin: 20px
+}
+
+.dog{
+  align-items: flex-start;
+   font-size: 1em;
+   gap: 30px;
+   max-width: 900px;
+   margin: 0;
+   padding: 20px
+   box-sizing: border-box;
+}
+
+img{
+   width: 330px;
+   height: 330px;
+   object-fit:cover;
+   border-radius:10px;
+}
+
+.dog p{
+    line-height: 1.4;
+    margin: 5px 0;
 }
