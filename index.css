@@ -1,0 +1,77 @@
+/* index.css */
+
+/* 1. הגדרות המיכל הראשי */
+.allDogs {
+    display: flex;       /* Flexbox פריסת */
+    flex-wrap: wrap;     /* מאפשר ירידת שורה */
+    gap: 30px;           /* רווח גדול יותר בין הכרטיסיות */
+    justify-content: center; /* מירכוז */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dogCard {
+    
+    flex: 0 1 calc(33.333% - 20px); 
+    background-color: #dcfeff;
+    border-radius: 15px; /* פינות מעוגלות */
+    padding: 0;          
+    text-align: center;
+    position: relative;  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    overflow: hidden;   
+}
+
+/* 3. הגדרות התמונה */
+.dogCard img {
+    width: 100%;
+    height: 450px;       /* גובה קבוע */
+    object-fit: cover;   /* מונע עיוות */
+    display: block;      /* מבטל רווח לבן מתחת לתמונה */
+}
+
+/* 4. הגדרות שם הכלב כתווית (מעל התמונה) */
+.dogCard h2 {
+    position: absolute;  /* מיקום מוחלט בתוך הכרטיסייה */
+    top: 15px;           /* מרחק מהקצה העליון */
+    left: 15px;          /* מרחק מהקצה השמאלי */
+    margin: 0;
+    padding: 8px 15px;
+    background-color: #00CED1;
+    color: #4a4a4a;      /* צבע טקסט כהה */
+    font-size: 0.9rem;   /* גודל פונט קטן יותר */
+    font-weight: bold;
+    border-radius: 5px;  /* פינות מעוגלות קלות */
+    text-transform: uppercase; /* אותיות גדולות */
+    letter-spacing: 1px;
+    z-index: 10;         /* מבטיח שהשם יהיה מעל התמונה */
+}
+
+/* 5. הגדרות הכפתור "More Info" */
+.dogCard a {
+    display: inline-block;
+    margin: 20px 0;      /* רווח מעל ומתחת */
+    padding: 12px 30px;
+    background-color: #fca3b7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;  /* פינות מעוגלות */
+    font-weight: bold;
+    text-transform: uppercase; /* אותיות גדולות */
+    font-size: 0.9rem;   /* גודל פונט */
+    letter-spacing: 1px;
+    transition: background-color 0.2s; /* אפקט מעבר חלק */
+}
+
+/* 6. אפקט הובר (מעבר עכבר) על הכפתור */
+.dogCard a:hover {
+    background-color: #f984a1; /* צבע כפתור ורוד כהה יותר בהובר */
+}
+
+/* 7. התאמה לרשת (רספונסיביות) [cite: 97] */
+@media (max-width: 768px) {
+    .dogCard {
+        flex: 0 1 100%; /* כרטיסייה אחת בשורה במסכים קטנים */
+    }
+}
