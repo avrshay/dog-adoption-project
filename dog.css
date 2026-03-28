@@ -83,7 +83,7 @@
 }
 
 /* Button styles following the index theme */
-#buttonAdopt, #buttonNext, #buttonPrev, #buttonBackAll {
+#buttonAdopt, #next-bth, #prev-bth, #buttonBackAll {
     text-decoration: none;
     padding: 12px 20px;
     font-size: 0.8rem;
@@ -99,7 +99,7 @@
     color: #333;
 }
 
-#buttonNext, #buttonPrev, #buttonBackAll {
+#prev-bth, #next-bth, #buttonBackAll {
     background-color: #f0f0f0;
     color: #777;
 }
