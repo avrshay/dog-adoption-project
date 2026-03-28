@@ -15,11 +15,12 @@ async function loadPage(){
     const buttonPrev= document.getElementById("buttonPrev");
     const buttonBackAll= document.getElementById("buttonBackAll");
     try{
-        const url="https://149b5824-3c07-4832-a151-01d4f8ed4820.mock.pstmn.io/dogs/"+getIdPage()
-        const pageLoaded= await fetch(url);
-        const informDog= await pageLoaded.json();
+     
+        const idDog= getIdPage();
+
+        const informDog= await fetchDogById(idDog);
+
         const imageDog=informDog.first_image_url;
-        const idDog= informDog.id;
         const nameDog= informDog.name;
         const ageDog= informDog.age;
         const breedDog= informDog.breed;
@@ -27,6 +28,7 @@ async function loadPage(){
         const house_trainedDog= informDog.house_trained;
         const vaccinatedDog= informDog.vaccinated;
         const storyDog= informDog.story;
+
         //Placing the appropriate values in the elements
         image.src=imageDog;
         image.alt= "the"+ nameDog +"image";
@@ -40,17 +42,19 @@ async function loadPage(){
         else{
             houseTrained.textContent="house trained: No";
         }
-        if(vaccinated){
+        if(vaccinatedDog){
              vaccinated.textContent="vaccinated: Yes";
         }
-        else if(!vaccinated){
+        else if(!vaccinatedDog){
              vaccinated.textContent="vaccinated: No";
         }
          else {
              vaccinated.textContent="vaccinated: Unknown";
          }
         story.textContent="Story:"+storyDog;
-        buttonAdopt.href= "adopt.html?id="+idDog;
+        
+        buttonAdopt.href= `adopt.html?id=${idDog}`;
+
         if(idDog<6){
         buttonNext.style.display= "inline-block";
         const nextDog=idDog+1;
@@ -65,8 +69,4 @@ async function loadPage(){
     console.error("error",error)}
 }
 
-function getIdPage(){
-const urlPageParameters=new URLSearchParams(window.location.search);
-const dogId= parseInt(urlPageParameters.get("id"));
-return dogId;
-}
+

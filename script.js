@@ -18,3 +18,15 @@ async function fetchDogById(id) {
         console.error("Error fetching dog by ID:", error);
     }
 }
+
+function getIdPage(){
+    const urlPageParameters=new URLSearchParams(window.location.search);
+    const dogId = urlPageParameters.get("id");
+    
+    if (!dogId) {
+        console.error("No ID found in URL");
+        return null;
+    }
+    
+    return parseInt(dogId);
+}

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadPage(){
-// load all the digs at once
+// load all the dogs at once
     try{
         //first - ask for the dogs data
         const dogs= await fetchAllDogs();
@@ -24,7 +24,7 @@ async function loadPage(){
                 img.src = dog.first_image_url;
                 h2.textContent = dog.name;
                 link.textContent = "More Info";
-                link.href = `dog.html?id=${i}`; //open the correct dog when click
+                link.href = `dog.html?id=${1+i}`; //open the correct dog when click
             }
         })
         ;
