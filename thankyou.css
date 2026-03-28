@@ -1,0 +1,72 @@
+/* thankyou.css */
+
+/* --- Main Layout --- */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 60px auto; /* Slightly more space from the top */
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: center; /* Center all text */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Dog Confirmation Section --- */
+.dogCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.dogCard img {
+    width: 200px; /* Larger image to celebrate the adoption */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Consistent circular style */
+    border: 5px solid #f7cac9; /* Pastel pink border */
+    margin-bottom: 25px;
+}
+
+#name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Success Message --- */
+#msg {
+    display: block;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* --- Back Home Button --- */
+.dogCard a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f7cac9;
+    color: #333;
+    padding: 15px 35px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dogCard a:hover {
+    background-color: #fca3b7;
+    transform: scale(1.05); /* Slight "pop" effect on hover */
+}
+

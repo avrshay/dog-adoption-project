@@ -26,7 +26,7 @@ async function loadPage(){
                 // and place the data at the correct places:
                 img.src = informDog.first_image_url;
                 img.alt = informDog.name;
-                h1.textContent = "Adopt "+informDog.name;
+                h1.textContent = "Adopt "+informDog.name + " <3";
 
                 //hundle the form
                 const adoptForm = document.getElementById("adoptForm");

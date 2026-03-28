@@ -26,7 +26,7 @@ async function loadPage(){
                 // and place the data at the correct places:
                 img.src = informDog.first_image_url;
                 img.alt = informDog.name;
-                h2.textContent = informDog.name + " <3";
+                h2.textContent = informDog.name + "'s new family!";
         }
 
     } catch (error) {

@@ -30,3 +30,4 @@ function getIdPage(){
     
     return parseInt(dogId);
 }
+
