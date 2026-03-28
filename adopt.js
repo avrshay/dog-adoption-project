@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadPage(){
-// load all the dogs at once
+
     try{
         //first - ask for the dog data
         const idDog = getIdPage(); 

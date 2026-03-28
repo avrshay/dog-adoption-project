@@ -25,3 +25,7 @@ h2{
     font-size: 0.85rem;
     margin-bottom: 40px;
 }
+
+image{
+    object-fit: cover 
+}

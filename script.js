@@ -20,8 +20,8 @@ async function fetchDogById(id) {
 }
 
 function getIdPage(){
-    const urlPageParameters=new URLSearchParams(window.location.search);
-    const dogId = urlPageParameters.get("id");
+    const params=new URLSearchParams(window.location.search);
+    const dogId = params.get("id");
     
     if (!dogId) {
         console.error("No ID found in URL");
