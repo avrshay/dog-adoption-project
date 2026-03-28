@@ -6,7 +6,7 @@ async function loadPage(){
 
     try{
         //first - ask for the dog data
-        const idDog = getIdPage(); 
+        const idDog = getDogIdFromURL();
         
         if (!idDog) {
             console.error("No ID found in URL");

@@ -20,6 +20,19 @@
     height: 450px; /* Consistent height */
     object-fit: cover; /* ESSENTIAL: Prevents distortion */
     border-radius: 8px;
+    border: 5px solid #f7cac9; /* Pastel pink border */
+    margin-bottom: 25px;
+}
+#nameDog {
+    font-size: 3rem;
+    color: #333;
+    margin: 20px 0 10px 0;
+    padding: 0 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: static;
+    background: none;
 }
 
 /* --- Dog Info Column --- */
@@ -48,8 +61,13 @@
     margin-right: 10px;
 }
 
+.dog-Story{
+    width=100%;
+    margin-top: 2px;
+}
+
 #Story {
-    margin-top: 15px;
+    margin-top: 5px;
     line-height: 1.8;
     border-bottom: none;
     color: #666;

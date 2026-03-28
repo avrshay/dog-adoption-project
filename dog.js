@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", loadPage); //Loading all page elemen
 
 async function loadPage(){
 // all the elements we need from dog.html
+    const title=document.getElementById("nameDog");
     const image= document.getElementById("dogImage");
     const name= document.getElementById("Name");
     const breed= document.getElementById("Breed");
@@ -15,11 +16,11 @@ async function loadPage(){
     const buttonPrev= document.getElementById("buttonPrev");
     const buttonBackAll= document.getElementById("buttonBackAll");
     try{
-     
-        const idDog= getIdPage();
 
-        const informDog= await fetchDogById(idDog);
+        const idDog= getDogIdFromURL();
 
+        const inform= await fetchDogById(idDog);
+        const informDog= inform[0];
         const imageDog=informDog.first_image_url;
         const nameDog= informDog.name;
         const ageDog= informDog.age;
@@ -32,29 +33,15 @@ async function loadPage(){
         //Placing the appropriate values in the elements
         image.src=imageDog;
         image.alt= "the"+ nameDog +"image";
+        title.textContent= nameDog+" Details"
         name.textContent= "Name: "+nameDog;
         breed.textContent= "Breed: "+breedDog;
         age.textContent= "Age: "+ageDog;
         sex.textContent= "Sex: "+sexDog;
-        if(house_trainedDog){
-            houseTrained.textContent="house trained: Yes";
-        }
-        else{
-            houseTrained.textContent="house trained: No";
-        }
-        if(vaccinatedDog){
-             vaccinated.textContent="vaccinated: Yes";
-        }
-        else if(!vaccinatedDog){
-             vaccinated.textContent="vaccinated: No";
-        }
-         else {
-             vaccinated.textContent="vaccinated: Unknown";
-         }
+        houseTrained.textContent="house trained: "+ formatBoolean(house_trainedDog);
+        vaccinated.textContent="vaccinated: " + formatBoolean(vaccinatedDog);
         story.textContent="Story:"+storyDog;
-        
         buttonAdopt.href= `adopt.html?id=${idDog}`;
-
         if(idDog<6){
         buttonNext.style.display= "inline-block";
         const nextDog=idDog+1;

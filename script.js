@@ -19,9 +19,9 @@ async function fetchDogById(id) {
     }
 }
 
-function getIdPage(){
-    const params=new URLSearchParams(window.location.search);
-    const dogId = params.get("id");
+function getDogIdFromURL(){
+    var params=new URLSearchParams(window.location.search);
+    var dogId = params.get("id");
     
     if (!dogId) {
         console.error("No ID found in URL");
@@ -30,4 +30,18 @@ function getIdPage(){
     
     return parseInt(dogId);
 }
+
+function formatBoolean(value){
+    if(value){
+        return "Yes";
+    }
+    else if(!value){
+        return "No"
+    }
+    return "Unknown"
+    }
+
+
+
+
 
