@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+#Adoption-title{
+    text-transform: none;
+}
+
 .dogCard img {
     width: 200px; /* Larger image to celebrate the adoption */
     height: 200px;
