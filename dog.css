@@ -107,6 +107,12 @@
 #buttonAdopt:hover {
     background-color: #fca3b7;
 }
+#prev-btn:hover {
+    background-color: #e0e0e0;
+}
+#next-btn:hover {
+    background-color: #e0e0e0;
+}
 
 #buttonBackAll:hover {
     background-color: #e0e0e0;
