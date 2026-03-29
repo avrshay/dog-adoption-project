@@ -12,8 +12,8 @@ async function loadPage(){
     const vaccinated= document.getElementById("Vaccinated");
     const story= document.getElementById("Story");
     const buttonAdopt= document.getElementById("buttonAdopt");
-    const buttonNext= document.getElementById("next-bth");
-    const buttonPrev= document.getElementById("prev-bth");
+    const buttonNext= document.getElementById("next-btn");
+    const buttonPrev= document.getElementById("prev-btn");
     const buttonBackAll= document.getElementById("buttonBackAll");
     try{
 
