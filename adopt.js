@@ -30,11 +30,44 @@ async function loadPage(){
 
                 //hundle the form
                 const adoptForm = document.getElementById("adoptForm");
-                adoptForm.addEventListener("submit", (e) => {
-                
-                e.preventDefault(); //prevent refresh
 
-                window.location.href = `thankyou.html?id=${idDog}`;
+                adoptForm.addEventListener("submit", async (e) => {
+                
+                    e.preventDefault();//prevent refresh
+
+                    //take what the user wrote
+                    const email = document.getElementById("email").value;
+                    const fullName = document.getElementById("fullName").value;
+                    const phone = document.getElementById("phone").value;
+                    
+                    //create an object to send
+                    const formData = {
+                        email: email,
+                        fullName: fullName,
+                        phone: phone
+                    };
+
+                    try {
+                        //POST
+                        const response = await fetch(`https://149b5824-3c07-4832-a151-01d4f8ed4820.mock.pstmn.io/dogs/${idDog}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            console.log("Data sent successfully");
+                            window.location.href = `thankyou.html?id=${idDog}`;
+                        } else {
+                            console.error("Server returned an error");
+                        }
+                    } 
+                    catch (error) {
+                        console.error("Network error:", error);
+                       
+                    }
             });
         }
 
