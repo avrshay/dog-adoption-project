@@ -3,14 +3,14 @@
 /* --- Container for the dog details section --- */
 .dog {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping on mobile devices */
+    flex-wrap: wrap; 
     gap: 50px; /* Space between image and info */
     max-width: 1000px;
     margin: 40px auto; /* Centers the container */
     padding: 30px;
     background-color: white;
     border-radius: 12px;
-    border: 1px solid #eee; /* Light border to match index cards */
+    border: 1px solid #eee; /* Light border */
 }
 
 /* --- Dog Image Styling --- */
@@ -18,9 +18,9 @@
     flex: 0 1 400px; /* Base width of 400px */
     width: 100%;
     height: 450px; /* Consistent height */
-    object-fit: cover; /* ESSENTIAL: Prevents distortion */
+    object-fit: cover; 
     border-radius: 8px;
-    border: 5px solid #f7cac9; /* Pastel pink border */
+    border: 5px solid #f7cac9; /* border */
     margin-bottom: 25px;
 }
 #nameDog {
@@ -40,7 +40,7 @@
     flex: 1; /* Takes up the remaining space */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically centers the text */
+    justify-content: center; 
 }
 
 /* --- Specific Text Elements --- */
@@ -52,7 +52,7 @@
     padding-bottom: 8px;
 }
 
-/* Styling for the labels inside paragraphs (bolded via JS or HTML) */
+/* Styling for the labels inside paragraphs */
 .dog p strong {
     color: #888;
     text-transform: uppercase;
@@ -95,7 +95,7 @@
 }
 
 #buttonAdopt {
-    background-color: #f7cac9; /* Pastel pink */
+    background-color: #f7cac9;
     color: #333;
 }
 
